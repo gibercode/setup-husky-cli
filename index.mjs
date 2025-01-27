@@ -14,6 +14,9 @@ async function installHusky(targetDir) {
   });
 
   console.log(chalk.blue("Setting up Husky Git hooks..."));
+
+  execSync("npx husky install", { cwd: targetDir, stdio: "inherit" });
+
   await fs.mkdir(path.resolve(targetDir, ".husky"), { recursive: true });
 
   const huskyPreparePath = path.resolve(
@@ -52,7 +55,11 @@ async function setupPreCommitHook(targetDir) {
   const huskyHookPath = path.resolve(targetDir, ".husky", "pre-commit");
 
   try {
-    await fs.writeFile(huskyHookPath, preCommitCommand, { mode: 0o755 });
+    execSync(`npx husky add ${huskyHookPath} "${preCommitCommand}"`, {
+      cwd: targetDir,
+      stdio: "inherit",
+    });
+
     console.log(chalk.green("Pre-commit hook added!"));
   } catch (error) {
     console.error(
