@@ -1,0 +1,29 @@
+{
+  "name": "setup-husky-cli",
+  "version": "0.1.0",
+  "main": "index.mjs",
+  "bin": {
+    "setup-husky-cli": "./index.mjs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giberson Lara",
+  "keywords": [
+    "cli",
+    "husky",
+    "pre-commit",
+    "build",
+    "automation"
+  ],
+  "license": "ISC",
+  "description": "A customizable CLI tool for setting up Husky pre-commit hooks and running custom build processes across various projects.",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "inquirer": "^12.3.2"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
