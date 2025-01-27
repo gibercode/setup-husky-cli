@@ -1,6 +1,6 @@
 {
-  "name": "setup-husky-cli1",
-  "version": "0.1.0",
+  "name": "setup-husky-cli",
+  "version": "0.2.0",
   "main": "index.mjs",
   "bin": {
     "setup-husky-cli": "./index.mjs"
