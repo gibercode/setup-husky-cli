@@ -1,13 +1,14 @@
 {
   "name": "setup-husky-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.mjs",
   "bin": {
     "setup-husky-cli": "./index.mjs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "setup-husky-cli"
+    "postinstall": "echo 'Husky setup completed. Run npm, yarn, or pnpm run setup-husky to configure your project.'",
+    "setup-husky": "setup-husky-cli"
   },
   "author": "Giberson Lara",
   "keywords": [
