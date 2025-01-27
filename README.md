@@ -29,16 +29,16 @@ Once installed, you can use the CLI tool to configure **Husky pre-commit hooks**
 Then run the following command:
 
 ```bash
-npm run setup-husky
+npm run setup-husky-cli
 ```
 For Yarn or pnpm, you can also use:
 
 ```bash
-yarn setup-husky
+yarn setup-husky-cli
 ```
 
 ```bash
-pnpm run setup-husky
+pnpm run setup-husky-cli
 ```
 
 This will prompt you to enter the path to the project directory and the pre-commit command you want to run, the hook will run a custom command (like `npm run lint`) before every commit.
